@@ -1,0 +1,13 @@
+This is (currently) an extremely simple API for interacting with the Weatherbug Web API. There is little (if any) commenting. It's mostly very self-explanitory. In fact, it really contains nothing more then simple wrappers for a few of the Weatherbug API response objects. I might add some more content on this, but for now it's more of a primer than a full-fledged library. Feel free to use it to help figure out how to interface with the Weatherbug API.
+
+Usage instructions:
+
+-Import it into your project.
+-Enter your API key into the weatherbugapi.properties file (contained in com.codefreak.weatherbugapi)
+-Call the methods listed in WeatherBugAPI.java
+
+That's it.
+
+If a function isn't listed, it shouldn't be too hard to create it. The biggest hurdle is the fact that the responses are inconsistantly formatted (different types of responses don't use similar XML objects), and it's not really obvious what all the fields do.
+
+One very useful method is the static "getIconURL" method in the main WeatherBugAPI class. Feed it an imageURL or iconName from a response object, along with a size (see the constants) and a transparency boolean in order to retrieve an icon URL that's more useful than the default icons offered up by the weatherbug API.
